@@ -8,8 +8,18 @@ import static java.util.Collections.*;
 public class Cars {
     private final List<Car> cars;
 
-    public Cars(List<Car> cars) {
+    private Cars(List<Car> cars) {
         this.cars = cars;
+    }
+
+    static public Cars fromNames(List<String> names) {
+        return new Cars(names.stream()
+                .map(Car::new)
+                .collect(Collectors.toList()));
+    }
+
+    static public Cars fromCars(List<Car> cars) {
+        return new Cars(cars);
     }
 
     public List<Car> toList() {

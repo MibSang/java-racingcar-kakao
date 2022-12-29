@@ -12,12 +12,10 @@ public class RacingTest {
 
     @BeforeEach
     void setUp() {
-        racing = new Racing();
-        racing.setCount(4);
-        racing.addCars(Arrays.asList(
+        racing = Racing.fromCars(Arrays.asList(
                 new Car("davi", () -> true, 0),
                 new Car("sean", () -> false, 5)
-        ));
+        ), 4);
     }
 
     @Test

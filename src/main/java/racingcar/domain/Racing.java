@@ -3,15 +3,20 @@ package racingcar.domain;
 import java.util.List;
 
 public class Racing {
-    private Cars cars;
+    private final Cars cars;
     private int count;
 
-    public void setCount(int count) {
+    private Racing(Cars cars, int count) {
+        this.cars = cars;
         this.count = count;
     }
 
-    public void addCars(List<Car> names) {
-        this.cars = new Cars(names);
+    static public Racing fromNames(List<String> names, int count) {
+        return new Racing(Cars.fromNames(names), count);
+    }
+
+    static public Racing fromCars(List<Car> cars, int count) {
+        return new Racing(Cars.fromCars(cars), count);
     }
 
     public List<Car> getCarList() {
