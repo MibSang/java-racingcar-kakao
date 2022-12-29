@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ public class Cars {
     }
 
     public List<Car> toList() {
-        return cars;
+        return new ArrayList<>(cars);
     }
 
     public void tryForward() {
