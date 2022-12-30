@@ -36,7 +36,7 @@ public class RacingTest {
 
     @Test
     void 레이싱_종료후_결과를_반환한다() {
-        while (racing.isForwadable()) {
+        while (racing.isForwardable()) {
             racing.tryForward();
         }
 

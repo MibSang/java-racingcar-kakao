@@ -33,7 +33,7 @@ public class Racing {
         return count;
     }
 
-    public boolean isForwadable() {
+    public boolean isForwardable() {
         return count != 0;
     }
 
