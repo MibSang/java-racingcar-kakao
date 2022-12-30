@@ -33,7 +33,7 @@ public class Racing {
         return count;
     }
 
-    public boolean isProceed() {
+    public boolean isForwadable() {
         return count != 0;
     }
 
