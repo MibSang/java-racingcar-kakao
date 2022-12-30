@@ -1,6 +1,7 @@
 package racingcar.view;
 
 import racingcar.domain.Car;
+import racingcar.exception.CarNameInvalidException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,8 +20,10 @@ public class RacingCarView {
 
     private static void checkCarName(List<String> names) throws RuntimeException {
         names.forEach(s -> {
-            if (s == null || s.length() == 0) throw new IllegalArgumentException();
-            if (s.length() > 5) throw new IllegalArgumentException();
+            if (s == null || s.length() == 0)
+                throw new CarNameInvalidException("자동차 이름이 입력되지 않았습니다.");
+            if (s.length() > 5)
+                throw new CarNameInvalidException("자동차 이름이 5글자를 초과합니다.");
         });
     }
 
