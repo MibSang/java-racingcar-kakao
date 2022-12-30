@@ -8,7 +8,7 @@ public class App {
         Racing racing = Racing.fromNames(RacingCarView.inputCarNames(), RacingCarView.inputCount());
 
         RacingCarView.resultMessage();
-        while (racing.isNotFinished())
+        while (racing.isProceed())
             RacingCarView.printResultOfCars(racing.tryForward());
         RacingCarView.printWinners(racing.winner());
     }

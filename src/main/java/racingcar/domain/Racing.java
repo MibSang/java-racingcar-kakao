@@ -33,7 +33,7 @@ public class Racing {
         return count;
     }
 
-    public boolean isNotFinished() {
+    public boolean isProceed() {
         return count != 0;
     }
 
